@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #7f7f7f;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+#imageToDisplay {
+  max-height: 400px;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.product-description {
+  font-size: 18px;
+}
+
+.product-details {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.product-details h2 {
+  margin-top: 0;
+}
+
+/* Custom styles for the accordion button */
+#accordion h3.ui-accordion-header {
+  background: linear-gradient(to bottom, #e6b8b7, #d8d6ea);
+  color: #222;
+  border: 1px solid #c7c2d4;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Custom styles for the accordion button when active (expanded) */
+#accordion h3.ui-accordion-header.ui-state-active {
+  background: linear-gradient(to bottom, #d8d6ea, #c7c2d4);
+}
+
+/* Custom styles for the product name and quantity box */
+.product-info-box {
+  background-color: #d8a6a5; /* Slightly darker shade of pastel pink */
+  color: #222;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Custom styles for the "Add to Cart" button */
+.buy {
+  background: linear-gradient(to bottom, #d8d6ea, #c7c2d4);/* Pastel blue color */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+

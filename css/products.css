@@ -1,0 +1,149 @@
+/* This class defines the layout and positioning of a container that holds multiple product cards */
+.product-cards {
+  margin: 40px 40px 100px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* This class defines the styling for an individual product card */
+.product-card {
+  width: calc(25% - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* This selector targets the image element inside the product card */
+.product-card img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* This selector targets the heading element inside the product card */
+.product-card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+/* This selector targets the paragraph element inside the product card */
+.product-card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  height: 65px;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+/* This selector targets the button element inside the product card */
+.product-card button {
+  text-align: center;
+  background-color: #013b23;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease-in-out;
+  display: block;
+  width: 100%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+}
+
+/* This selector targets the button element inside the product card when it is hovered over */
+.product-card button:hover {
+  transform: scale(1.05);
+}
+
+/* This selector targets the button element inside the product card when it is clicked */
+.product-card button:active {
+  transform: scale(0.95);
+}
+
+/* This selector targets the element with class 'buy-now' inside the product card */
+.product-card .buy-now {
+  background-color: #fff;
+  color: #142431;
+  border: 2px solid #142431;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 0;
+  width: 100%;
+}
+
+/* This selector targets all h2 elements */
+h2 {
+  width: 100%;
+  text-align: center;
+  color: #013b23;
+}
+
+/* This selector targets all h3 elements */
+h3 {
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Search bar styles */
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  justify-content: center;
+
+}
+
+#search-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 70%;
+}
+
+#search-button {
+  padding: 10px 12px;
+  background-color: #013b23;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* This media query applies the following styles only when the screen width is at least 1024 pixels */
+@media screen and (min-width: 1024px) {
+  .product-cards {
+    margin: 40px 80px 100px 80px;
+  }
+}
+
+/* This media query applies the following styles only when the screen width is at most 767 pixels */
+@media screen and (max-width: 767px) {
+  .product-cards {
+    margin: 20px;
+  }
+  .product-card {
+    width: calc(50% - 10px);
+  }
+
+  /* This selector targets the element with class 'product-buttons' inside the product card */
+  .product-card .product-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* This selector targets the element with class 'add-to-cart' inside the product card */
+  .product-card .add-to-cart {
+    margin: 10px 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Checkout</title>
+  <link rel="stylesheet" type="text/css" href="../css/checkout.css">
+</head>
+
+<body>
+  <div class="header">
+    <h1>Exclusive Shop</h1>
+    <!-- Add your logo or any additional content here -->
+  </div>
+  <div class="checkout-container show" id="checkout-container">
+    <ul id="selected-products-list"></ul>
+    <p>Total Price: <span id="total-price">$0</span></p>
+    <button id="place-order-btn">Place Order</button>
+    <button id="clear-cart-btn">Clear Cart</button>
+  </div>
+
+  <script>
+
+
+    // Function to display the selected products on the checkout page
+    function displaySelectedProducts() {
+      const selectedProducts = JSON.parse(localStorage.getItem("selectedProducts"));
+      const selectedProductsList = document.getElementById("selected-products-list");
+      selectedProductsList.innerHTML = ""; // Clear the list before adding new products
+      const totalPriceElement = document.getElementById("total-price");
+      let totalPrice = 0;
+
+      if (selectedProducts && selectedProducts.length > 0) {
+        selectedProducts.forEach((product) => {
+          const listItem = document.createElement("li");
+          listItem.textContent = `${product.name} - Price: ${product.price}`;
+          selectedProductsList.appendChild(listItem);
+
+          // Use regular expression to extract numerical value from price string and convert it to a float
+          const priceValue = parseFloat(product.price.match(/[\d.]+/));
+          totalPrice += priceValue;
+        });
+
+        totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+      } else {
+        const listItem = document.createElement("li");
+        listItem.textContent = "No products selected.";
+        selectedProductsList.appendChild(listItem);
+        totalPriceElement.textContent = "$0";
+      }
+    }
+
+    // Function to clear the cart and remove all selected products
+    function clearCart() {
+      localStorage.removeItem("selectedProducts");
+      displaySelectedProducts(); // Call the function to update the display after clearing the cart
+    }
+
+    // Call the function to display the selected products
+    displaySelectedProducts();
+
+    // Add event listener to the "Clear Cart" button
+    document.getElementById("clear-cart-btn").addEventListener("click", clearCart);
+
+    // Function to show the modal when the "Place Order" button is clicked
+    function showOrderPlacedModal() {
+      // You can add any logic here to handle the order placement process.
+      // For demonstration purposes, we'll simply clear the cart and then open the modal page using window.open().
+      const selectedProducts = JSON.parse(localStorage.getItem("selectedProducts"));
+      if (!selectedProducts || selectedProducts.length === 0) {
+        alert("Please select products before placing an order.");
+        return;
+      }
+
+      // Clear the cart
+      clearCart();
+
+
+      const modalPageUrl = "./modal.html";
+      window.open(modalPageUrl, "_blank", "width=400,height=300");
+    }
+
+    // Add event listener to the "Place Order" button
+    document.getElementById("place-order-btn").addEventListener("click", showOrderPlacedModal);
+
+    // JavaScript code for showing the animation when the page loads
+    document.addEventListener("DOMContentLoaded", function () {
+      const checkoutContainer = document.getElementById("checkout-container");
+      checkoutContainer.classList.add("show");
+    });
+
+
+  </script>
+</body>
+
+</html>
