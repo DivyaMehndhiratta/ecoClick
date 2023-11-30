@@ -1,0 +1,170 @@
+/* CSS for blog section */
+
+/* Styling for the container that holds each blog section */
+.blogs {
+  display: flex;
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Background cover of the blog */
+.blog-bkg-cover {
+  margin-top: 40px;
+  flex: 1; /* occupy 50% of the available space */
+  width: 700px;
+  height: 500px;
+}
+
+/* Heading of the blog */
+.blog-heading {
+  font-size: 45px;
+  color: #013b23;
+  flex: 1; /* occupy 50% of the available space */
+}
+
+/* Media Query for Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Change the layout to vertical on tablet screens */
+  .blogs {
+    flex-direction: column;
+  }
+
+  /* Change size and position of the background cover on tablet screens */
+  .blog-bkg-cover {
+    width: 500px;
+    height: 300px;
+    margin-top: 0;
+  }
+
+  /* Change the font size and margin top of the heading on tablet screens */
+  .blog-heading {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+}
+
+/* Media Query for Mobiles */
+@media only screen and (max-width: 768px) {
+  /* Change the layout to vertical on mobile screens */
+  .blogs {
+    flex-direction: column;
+  }
+
+  /* Change size and position of the background cover on mobile screens */
+  .blog-bkg-cover {
+    width: 350px;
+    height: 150px;
+    margin-top: 0;
+  }
+
+  /* Change the font size and margin top of the heading on mobile screens */
+  .blog-heading {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+}
+
+/* Styling for blog cards */
+.blog-cards img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.blog-cards a {
+  text-decoration: none;
+}
+
+/* Media Query for Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Change the layout of the blog cards on tablet screens */
+  .blog-cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Change the size, margin, and text alignment of the blog cards on tablet screens */
+  .blog-cards {
+    width: calc(50% - 20px);
+    margin: 10px;
+    text-align: center;
+  }
+
+  /* Change the size of the image on tablet screens */
+  .blog-cards img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  }
+
+  /* Change the font size and color of the title on tablet screens */
+  .blog-cards h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #013b23;
+  }
+}
+
+/* Media Query for Desktops */
+@media (min-width: 1024px) {
+  /* Change the layout of the blog cards on desktop screens */
+  .blog-cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Change the size, margin, and text alignment of the blog cards on desktop screens */
+  .blog-cards {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    text-align: center;
+  }
+
+  /* Set the dimensions and object-fit for the blog card images */
+  .blog-cards img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+  }
+
+  /* Adjust the margin and font size of the blog card headings */
+  .blog-cards h3 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #013b23;
+  }
+}
+
+/* Media Query for Mobiles (repeated to target mobile devices with max-width 768px) */
+@media only screen and (max-width: 768px) {
+  /* Change the layout of the blog cards on mobile screens */
+  .blog-cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Change the size and margin of the blog cards on mobile screens */
+  .blog-cards {
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+  }
+
+  /* Set the dimensions and object-fit for the blog card images on mobile screens */
+  .blog-cards img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  }
+
+  /* Adjust the margin and font size of the blog card headings on mobile screens */
+  .blog-cards h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #013b23;
+  }
+}

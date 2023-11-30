@@ -1,0 +1,131 @@
+<!--Authors: Divya-C0883916, Sarthak-C0883191, Ashita-C0885078, Akashdeep Gill-C0883925
+   Project: EcoClicks: Revolutionising Sustainable Shopping Worldwide
+   Date: 04-03-2023
+   Description: This HTML page represents Contact Us Information which consists of location and Form.  
+   -->
+   <!DOCTYPE html>
+   <html lang="en">
+      <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width,initial-scale=1.0">
+         <title>Contact Us</title>
+         <link rel="stylesheet" href="../css/common.css" type="text/css">
+         <!-- This link tag links to the contact CSS file -->
+         <link rel="stylesheet" href="../css/contact.css" type="text/css">
+      </head>
+      <body>
+          <!--Header section with navigation bar-->
+         <header>
+            <nav class="navbar">
+               <a href="../php/home.php"><img loading="lazy"
+                  src="../img/2.png" class="logo"
+                  alt="Company's logo"></a>
+               <ul class="navbar-list">
+                  <li><a class="navbar-list-items" href="./about.html">About us</a></li>
+                  <li><a class="navbar-list-items" href="./products.html">Products</a></li>
+                  <li><a class="navbar-list-items" href="./contact.html">Contact us</a></li>
+               </ul>
+            </nav>
+         </header>
+         <!-- This is the main section of the HTML code -->
+         <main>
+            <!-- This is a section for the contact information -->
+            <section class="contact-container">
+                <!-- This is a div that contains the heading and a brief description for the contact section -->
+               <div>
+                  <h2 class="contact-heading">Contact</h2>
+                  <p class="contact-p">Contact information for easy and efficient communication, including phone number and email address to reach out
+                     and connect with me.
+                  </p>
+               </div>
+               <!-- This is a div containing two child divs, one for the location and contact information and the other for the form to submit the message -->
+               <div class="d-flex">
+                  <!-- This is a div containing the location and contact information -->
+                  <div class = "iframe-map">
+                     <!-- This is a div that contains information about the location, email, and phone number -->
+                     <div class="info">
+                        <div>
+                           <h4>Location:</h4>
+                           <p>Lambton college;265 Yorkland Blvd #400, North York, ON M2J 1S5</p>
+                        </div>
+                        <div class="email">
+                           <h4>Email:</h4>
+                           <p><a href="mailto:email@example.com">email@example.com</a></p>
+                        </div>
+                        <div>
+                           <h4>Call:</h4>
+                           <p><a href="tel:+11234567890">+1 123-456-7890</a></p>
+                        </div>
+                        <!-- This is an iframe for a Google Maps location of Lambton College in Toronto -->
+                        <iframe
+                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.9811713386816!2d-79.33830388416648!3d43.77324967911741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d3bca1a3f78f%3A0x815365ed6c3b957e!2sLambton%20College%20In%20Toronto!5e0!3m2!1sen!2sus!4v1680145929169!5m2!1sen!2sus"
+                           height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                           referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                  </div>
+                  <!-- This is a div containing a form to submit a message -->
+                  <div class="col-lg-7">
+                     <form>
+                        <div class="form-group">
+                           <input type="text" class="form-control" name="name" placeholder="Your Name" required >
+                        </div>
+                        <div class="form-group">
+                           <input type="email" class="form-control" name="email" placeholder="Your Email" required >
+                        </div>
+                        <div class="form-group">
+                           <input type="text" class="form-control" name="subject" placeholder="Subject" required >
+                        </div>
+                        <div class="form-group">
+                           <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="text-center">
+                           <button type="submit" class="add-form-btn">Send Message</button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </section>
+         </main>
+         <!--End Main Section -->
+         <!-- This is the footer section that contains information about social media, the website, and legal policies -->
+         <footer class="footer">
+            <div class="footer-wrapper">
+               <!-- This section contains links to various social media pages -->
+               <div class="column social">
+                  <h3>Social</h3>
+                  <ul>
+                     <li><a href="#"><img src="https://642b0c5fb9346d4bb3c59062--fascinating-sopapillas-34261b.netlify.app/linkedin.svg" alt="LinkedIn"></a></li>
+                     <li><a href="#"><img src="https://642b0c5fb9346d4bb3c59062--fascinating-sopapillas-34261b.netlify.app/facebook.svg" alt="Facebook"></a></li>
+                     <li><a href="#"><img src="https://642b0c5fb9346d4bb3c59062--fascinating-sopapillas-34261b.netlify.app/wordpress.svg" alt="WordPress"></a></li>
+                     <li><a href="#"><img src="https://642b0c5fb9346d4bb3c59062--fascinating-sopapillas-34261b.netlify.app/envelope-regular.svg" alt="Email"></a></li>
+                  </ul>
+               </div>
+               <!-- This section contains links to the about page, contact page, careers page, and help center page -->
+               <div class="column about">
+                  <h3>About</h3>
+                  <ul>
+                     <li><a href="../html/about.html">About us</a></li>
+                     <li><a href="../html/contact.html">Contact us</a></li>
+                     <li><a href="#">Careers</a></li>
+                     <li><a href="#">Help Center</a></li>
+                  </ul>
+               </div>
+               <!-- This section contains links to data policy, privacy policy, terms, and imprint pages -->
+               <div class="column legals">
+                  <h3>Legals</h3>
+                  <ul>
+                     <li><a href="#">Data Policy</a></li>
+                     <li><a href="#">Private Policy</a></li>
+                     <li><a href="#">Terms</a></li>
+                     <li><a href="#">Imprint</a></li>
+                  </ul>
+               </div>
+            </div>
+            <!-- This section contains the copyright information -->
+            <div class="copyright">
+               <p>&#169; 2023 EcoClicks(Ashita Divya Akash   Sarthak)</p>
+            </div>
+         </footer>
+         <!-- End of footer section -->
+      </body>
+   </html>

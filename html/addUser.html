@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <!-- Load jQuery library and jQuery Validation plugin -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script>
+
+  <!-- Load custom JavaScript file for form validation -->
+  <script src="../js/jQFormsRegister.js"></script>
+
+  <!-- Link to the custom CSS file -->
+  <link rel="stylesheet" type="text/css" href="../css/jQForms.css">
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+	<link rel="stylesheet" href="../css/jquery-ui.theme.css">
+	<script src="../js/jquery-ui.js"></script>
+	<script src="../js/jquery-ui.js"></script>
+
+  <title>jQueryForms</title>
+</head>
+
+<body class="background">
+  <!-- Registration Form -->
+  <form id="registration-form" action="../php/adduser.php" method="post">
+    <!-- Input fields for user information -->
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname" name="firstname" /><br />
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" name="lastname" /><br />
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" /><br /><br />
+
+    <!-- Radio buttons for gender selection -->
+    <label for="gender">Gender: </label>
+    <div class="dflex">
+      <input type="radio" id="female" name="gender" value="F" />  
+      <label for="female">Female</label>  
+      <input type="radio" id="male" name="gender" value="M" />  
+      <label for="male">Male</label>
+    </div>
+    <br />
+
+    <label for="phone">Phone number:</label>
+    <input type="number" id="phone" name="phone" /><br /><br />
+
+    <!-- Input field for address -->
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" /><br />
+
+    <!-- Input fields for username and password -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" /><br />
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" /><br />
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" /><br />
+
+    <!-- Submit button for form submission -->
+    <input  class="ui-button ui-corner-all ui-widget" type="submit" value="Register" />
+  </form>
+
+  <!-- Link to the login page -->
+  <p class="loginLink">Have an account? <a href="../html/login.html">Login now</a></p>
+</body>
+</html>

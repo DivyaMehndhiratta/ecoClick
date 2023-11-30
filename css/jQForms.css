@@ -1,0 +1,64 @@
+/* Set font styles and background */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-size: cover;
+  background-image: url(../img/login.jpg);
+  background-repeat: no-repeat;
+  height: 34rem;
+  width: 34rem;
+  color: white;
+}
+
+/* Style the form */
+form {
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style form inputs and labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Style error messages */
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Flex container for aligning elements */
+.dflex {
+  display: flex;
+  align-items: baseline;
+}
+
+/* Additional style for class 'a' */
+.a {
+  font-weight: 900;
+}
+
+/* Styling for the login link */
+.loginLink a {
+  color: white;
+  padding-right: 20px;
+  font-weight: 900;
+  font-size: 16px;
+}

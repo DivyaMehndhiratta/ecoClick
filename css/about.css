@@ -1,0 +1,111 @@
+/* Authors: Divya-C0883916, Sarthak-C0883191, Ashita-C0885078, Akashdeep Gill-C0883925,
+    Project: EcoClicks: Revolutionising Sustainable Shopping Worldwide
+    Date: 04-03-2023
+    Description: This is the home CSS which includes HomePage/Index Stylings.*/
+
+/* Set text color of body to white */
+body {
+  color: #013b23;
+}
+
+/* Set width, margin, padding, background color and text alignment for page container */
+.page-container {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/* Set default styles for the team section */
+.team-section {
+  background: linear-gradient(
+    to right,
+    #c1e6c2,
+    #aed5b2,
+    #9bc4a2,
+    #87b392,
+    #74a281,
+    #619173,
+    #4d825b,
+    #3a7153,
+    #266143,
+    #013b23
+  );
+  color: #fff;
+  padding: 50px;
+}
+
+/* Set default styles for the team section heading */
+.team-section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+/* Set default styles for the table and its cells */
+.team-intro {
+  display: table;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+.team-intro td {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Set default styles for the figure captions */
+.team-intro figcaption {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Set default styles for the team member images */
+.team-intro img {
+  border-radius: 50%;
+  border: 5px solid #124c66;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* Adjust the number of columns displayed based on screen size */
+@media only screen and (max-width: 1024px) {
+  .team-intro {
+    display: table;
+    margin: 0 auto;
+    padding-top: 25px;
+  }
+
+  .team-intro img {
+    width: 175px;
+    height: 175px;
+  }
+
+  .team-intro td {
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .team-intro td:nth-child(odd) {
+    clear: left;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .team-intro td {
+    width: 100%;
+    float: none;
+    box-sizing: border-box;
+  }
+
+  .team-intro img {
+    width: 175px;
+    height: 175px;
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Description</title>
+  <link rel="stylesheet" href="../css/description.css" type="text/css">
+</head>
+<body>
+  <header>
+    <h1>Product Description</h1>
+  </header>
+  <main>
+    <img id="imageToDisplay" src="" alt="Image">
+    <div class="product-description">
+      <div class="product-info-box">
+        <h2 id="productNameText">Product Name</h2>
+        <ul id="accordion">
+          <li>
+            <h3>Description</h3>
+            <div>
+              <p id="productDescriptionText">
+                <!-- Placeholder description (lorem ipsum) for the product -->
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel nisi semper, facilisis augue quis, accumsan metus. Nam nec suscipit turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin eget erat vitae elit fringilla ultrices. Mauris ut volutpat nibh. Sed id quam vitae enim iaculis pellentesque.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="product-details">
+      <div class="product-info-box">
+        <ul>
+          <li><strong>Price:</strong> <span id="productPriceText">$0</span></li>
+          <li><strong>Quantity:</strong> <span id="productQuantityText">0</span></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+    // Retrieve the image URL from the query parameter and set it as the image source
+    const urlParams = new URLSearchParams(window.location.search);
+    const imageUrl = urlParams.get("image");
+    document.getElementById("imageToDisplay").src = imageUrl;
+
+    // Retrieve the product name, price, and quantity from the previous JavaScript data
+    const productData = JSON.parse(localStorage.getItem("selectedProduct"));
+    if (productData) {
+      document.getElementById("productNameText").innerText = productData.name;
+      document.getElementById("productPriceText").innerText = productData.price;
+
+      // Check if the productData object has the quantity property before updating
+      if ("quantity" in productData) {
+        document.getElementById("productQuantityText").innerText = productData.quantity;
+      } else {
+        // If the quantity property is not present, hide the "Quantity" element
+        const quantityElement = document.getElementById("productQuantityText");
+        quantityElement.parentElement.style.display = "none";
+      }
+    }
+
+    // Initialize the jQuery UI accordion on the "accordion" element
+    $(document).ready(function () {
+      $("#accordion").accordion({
+        collapsible: true, // Allow collapsing sections
+        heightStyle: "content" // Set the height of the accordion based on content
+      });
+    });
+  </script>
+</body>
+</html>
